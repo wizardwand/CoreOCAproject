@@ -19,9 +19,9 @@ public class InsertionSort {
         }
         System.out.println(System.currentTimeMillis());
         //is.insertionS(b);
-
         is.insertionSortReverse(a);
         System.out.println(System.currentTimeMillis());
+        System.out.println(a.length);
     }
 
     /**
@@ -44,19 +44,18 @@ public class InsertionSort {
     }
 
     public int[] insertionSortReverse(int a []){
-        //System.out.println("Initial Array : "+ Arrays.toString(a));
+        System.out.println("Initial Array : "+ Arrays.toString(a));
         for(int j = a.length-2 ; j > -1 ; j--){
-            //System.out.println("\t"+j+" : "+ Arrays.toString(a));
+            System.out.println("\t"+j+" : "+ Arrays.toString(a));
             int card = a[j] ;
             int i = j + 1 ;
             while (i < a.length && a[i] > card){
                 a[i-1] = a[i];
                 i++;
             }
-            System.out.println("\t"+j+" : "+ Arrays.toString(a));
             a[i-1] = card;
         }
-        //System.out.println(" Reverse Sorted Array : "+ Arrays.toString(a));
+        System.out.println(" Reverse Sorted Array : "+ Arrays.toString(a));
         return a ;
     }
 }
